@@ -1,0 +1,51 @@
+{
+  "name": "@xirelogy/axios-rest-api",
+  "version": "1.0.0",
+  "description": "REST API wrapper using Axios",
+  "keywords": [
+    "axios",
+    "REST API",
+    "REST"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xirelogy/axios-rest-api"
+  },   
+  "type": "module",
+  "main": "dist/axios-rest-api.umd.cjs",
+  "module": "dist/axios-rest-api.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/axios-rest-api.umd.cjs",
+      "import": "./dist/axios-rest-api.js"
+    },
+    "./locales": {
+      "types": "./dist/locales.d.ts",
+      "require": "./dist/locales.umd.js",
+      "import": "./dist/locales.es.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && vite build && tsc -P tsconfig.dts.json"
+  },
+  "dependencies": {
+    "query-string": "^9.1.0"
+  },
+  "peerDependencies": {
+    "@xirelogy/xwts": "^0.1",
+    "axios": ">=1.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.5",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "@xirelogy/rollup-plugin-xwts-i18n": "^1.0.0",
+    "typescript": "5.5",
+    "vite": "^4.4.5"
+  }
+}
